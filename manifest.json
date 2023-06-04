@@ -1,0 +1,26 @@
+{
+  "name": "Website Blocker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["declarativeNetRequest", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "fraud.png",
+      "48": "fraud.png",
+      "128": "fraud.png"
+    }
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "block_sites",
+        "enabled": true,
+        "path": "block-sites.json"
+      }
+    ]
+  }
+}

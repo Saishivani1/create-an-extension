@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "id": "block_example",
+      "priority": 1,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": ".*fortinet\\.com/support/.*",
+        "domains": ["*"]
+      }
+    },
+    {
+      "id": "block_another_example",
+      "priority": 2,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": ".*example\\.com/.*",
+        "domains": ["*"]
+      }
+    }
+    
+  ]
+}
